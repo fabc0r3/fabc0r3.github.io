@@ -33,8 +33,13 @@ html, body{
     align-items: center;
 }
 
+.ul__li-a:hover{
+    color: #FF7F11;
+}
+
 
 .ul__li-a{
+    transition: all 0.1s ease-in;
     text-decoration: none;
     color: black;
     padding: 2px;
@@ -52,6 +57,17 @@ html, body{
     align-items: center;
 }
 
+@keyframes subida {
+    0%{
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 .inicio__h1{
     align-self: center;
     justify-self: center;
@@ -64,11 +80,11 @@ html, body{
     border-radius: 50px;
     border: 2px ;
     font-family: work sans;
-
+    animation: subida 1s ease 
 }
 
 .inicio__button{
-    
+    animation: subida 2s ease;
     justify-content: end;
     display: flex;
     align-items: center;
@@ -85,6 +101,13 @@ html, body{
     font-size: 1.2rem;
     color: white;
     font-weight: 700;
+        transition: all 0.1s ease-in-out;
+}
+
+.inicio__button button:hover{
+    transform: scale(1.05);
+    background-color: #181818;
+
 }
 
 
@@ -96,11 +119,31 @@ html, body{
     
 }
 
+#iconoflecha{
+    animation-name: flechita;
+    animation-duration: 1s;
+    animation-delay: 3s;
+    animation-iteration-count: infinite;
+    
+}
 
+@keyframes flechita {
+    0% {
+        transform: translateY(0px);
+    }
 
+    50%{
+        transform: translateY(10px);
+    }
 
+    100% {
+        transform: translateY(0px);
+    }
+
+}   
 
 .section__problematica{
+    margin-top: 3%;
     width: 100%;
     background: url(agua.jpg);
     background-position: center;
@@ -121,9 +164,8 @@ html, body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
-
 }
+
 
 .problematica__titulos{
     background-color: white;
@@ -196,6 +238,13 @@ html, body{
     font-size: 1.2rem;
     color: white;
     font-weight: 700;
+    transition: all 0.2s ease-in;
+}
+
+.problemas__button-a button:hover{
+    transform: scale(1.05);
+    background-color: #181818;
+
 }
 
 
@@ -223,6 +272,7 @@ html, body{
     padding: 5px 20px;
     border-radius: 30px;
     border: 2px solid #FF7F11;
+    margin-top: -10%;
 
 }
 
@@ -235,23 +285,31 @@ html, body{
 
 .proyecto__ul {
     list-style: none; /* Remove default bullets */
-    box-shadow: 0px 0px 20px;
+    box-shadow: 3px 3px 4px #bbbbbb;
     border-radius: 20px;
     padding: 20px 40px 40px;
     margin: 20px 10px 10px 10px;
     background: white;
+    transition: all 0.5s ease-in-out;
+  }
 
+  .proyecto__ul:hover{
+    box-shadow: 6px 6px 10px;
 
   }
 
-.nosotros__ul  {
+  .nosotros__ul {
     list-style: none; /* Remove default bullets */
-    box-shadow: 0px 0px 20px;
+    box-shadow: 3px 3px 4px #bbbbbb;
     border-radius: 20px;
     padding: 20px 40px 40px;
     margin: 20px 10px 10px 10px;
     background: white;
+    transition: all 0.5s ease-in-out;
+  }
 
+  .nosotros__ul:hover{
+    box-shadow: 6px 6px 10px;
 
   }
   
